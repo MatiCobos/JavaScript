@@ -14,10 +14,11 @@ let cantidadDeLaCompra = parseInt(prompt("Hola " + nombreUsuario + "! indique de
 if (cantidadDeLaCompra <= 2){
 
 for(let i = 0; i < cantidadDeLaCompra; i++){
+
     let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar")
     if (nombreCompra === entradasEventoA){
         cantidadComprada = parseInt(prompt("Ingrese la cantidad de entradas que quiere"))
-        if (cantidadComprada <= 10){
+        if (cantidadComprada <= stockEntradasEventoA){
         precioTotal += cantidadComprada * precioEntradasEventoA
         alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoA + " en el Cosquin Rock 2022")
         stockEntradasEventoA = stockEntradasEventoA - cantidadComprada
@@ -28,8 +29,9 @@ for(let i = 0; i < cantidadDeLaCompra; i++){
         }
     }
     else if (nombreCompra === entradasEventoB){
+        
         cantidadComprada = parseInt(prompt("Ingrese la cantidad de entradas que quiere"))
-        if (cantidadComprada <= 10){
+        if (cantidadComprada <= stockEntradasEventoB){
         precioTotal += cantidadComprada * precioEntradasEventoB
         alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoB + " en el Cosquin Rock 2022")
         stockEntradasEventoB = stockEntradasEventoB - cantidadComprada
