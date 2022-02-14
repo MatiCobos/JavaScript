@@ -19,10 +19,10 @@ for(let i = 0; i < cantidadDeLaCompra; i++){
     if (nombreCompra === entradasEventoA){
         cantidadComprada = parseInt(prompt("Ingrese la cantidad de entradas que quiere"))
         if (cantidadComprada <= stockEntradasEventoA){
-        precioTotal += cantidadComprada * precioEntradasEventoA
-        alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoA + " en el Cosquin Rock 2022")
-        stockEntradasEventoA = stockEntradasEventoA - cantidadComprada
-        console.log(nombreUsuario + " compró " + cantidadComprada + " entradas de " + entradasEventoA + " quedando un stock final de: " + stockEntradasEventoA);
+            precioTotal += cantidadComprada * precioEntradasEventoA
+            alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoA + " en el Cosquin Rock 2022")
+            stockEntradasEventoA = stockEntradasEventoA - cantidadComprada
+            console.log(nombreUsuario + " compró " + cantidadComprada + " entradas de " + entradasEventoA + " quedando un stock final de: " + stockEntradasEventoA);
         }
         else{
             alert("Solo puede comprar hasta 10 entradas")
@@ -32,10 +32,10 @@ for(let i = 0; i < cantidadDeLaCompra; i++){
         
         cantidadComprada = parseInt(prompt("Ingrese la cantidad de entradas que quiere"))
         if (cantidadComprada <= stockEntradasEventoB){
-        precioTotal += cantidadComprada * precioEntradasEventoB
-        alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoB + " en el Cosquin Rock 2022")
-        stockEntradasEventoB = stockEntradasEventoB - cantidadComprada
-        console.log(nombreUsuario + " compró " + cantidadComprada + " entradas de " + entradasEventoB + " quedando un stock final de: " + stockEntradasEventoB)
+            precioTotal += cantidadComprada * precioEntradasEventoB
+            alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + entradasEventoB + " en el Cosquin Rock 2022")
+            stockEntradasEventoB = stockEntradasEventoB - cantidadComprada
+            console.log(nombreUsuario + " compró " + cantidadComprada + " entradas de " + entradasEventoB + " quedando un stock final de: " + stockEntradasEventoB)
         }
         else{
             alert("Solo puede comprar hasta 10 entradas")
