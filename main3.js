@@ -31,30 +31,34 @@ function compra(precio, artista, stock){
     }
     else{
         sinStock(artista)
+        compra(precio, artista, stock)
     }
 }
+
 //Fin funciones
 
 let nombreUsuario = prompt("Hola, bienvenido! \nIngrese su nombre por favor:")
-
-let cantidadDeLaCompra = parseInt(prompt("Hola " + nombreUsuario + "! indique de cuantos artistas diferentes quiere las entradas, en este sitio vendemos entradas para Divididos y La renga"))
+alert("Hola " + nombreUsuario + " acá vendemos entradas de estos artistas:\n-La renga\n-Divididos")
+let cantidadDeLaCompra = parseInt(prompt(nombreUsuario + "... Ahora pongamos 1 si queres para un artista o 2 si queres para ambos"))
 if (cantidadDeLaCompra <= 2){
 
-for(let i = 0; i < cantidadDeLaCompra; i++){
-    let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar")
-    if (nombreCompra === entradasEventoA){
-        compra (precioEntradasEventoA, entradasEventoA, stockEntradasEventoA)
-    }
-    else if (nombreCompra === entradasEventoB){
-        compra (precioEntradasEventoB, entradasEventoB, stockEntradasEventoB)
-    }
-    else{
-        alert("No tenemos entradas para ese artista")
-    }
+    for(let i = 0; i < cantidadDeLaCompra; i++){
+        let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar")
+        if ((nombreCompra === entradasEventoA) || (nombreCompra === "la renga")){
+            compra (precioEntradasEventoA, entradasEventoA, stockEntradasEventoA)
+        }
+        else if ((nombreCompra === entradasEventoB) || (nombreCompra === "divididos")){
+            compra (precioEntradasEventoB, entradasEventoB, stockEntradasEventoB)
+        }
+        else{
+            alert("No tenemos entradas para ese artista")
+            
+        }
 
-}
+    }
 }
 else{
     alert("Solo tenemos para dos artistas")
+    
 }
 alert(nombreUsuario + " muchas gracias por tu compra! Su saldo a pagar es: \n" + "$" + precioTotal)
