@@ -1,12 +1,29 @@
-//Variables
-let entradasEventoA = "La renga"
+//Dejo las variables comentadas a modo de referencia, por las dudas.
+/*let entradasEventoA = "La renga"
 let precioEntradasEventoA = 1000
 let stockEntradasEventoA = 10
 
 let entradasEventoB = "Divididos"
 let precioEntradasEventoB = 3000
-let stockEntradasEventoB = 10
-let cantidadComprada  //?
+let stockEntradasEventoB = 10*/ 
+
+//Funcion constructora
+class Entradas {
+    constructor (nombreValor, precioValor, stockValor){
+        this.nombre = nombreValor;
+        this.precio = precioValor;
+        this.stock = stockValor;
+    }
+}
+//Fin funcion contructora
+
+//Objetos creados a partir de la funcion/class constructora
+const eventoA = new Entradas ("La renga", 1000, 10)
+const eventoB = new Entradas ("Divididos", 3000, 10)
+//Fin objetos creados a partir de la funcion/class constructora
+
+//Variables
+let cantidadComprada = 0
 let precioTotal = 0
 //Fin variables
 
@@ -34,27 +51,25 @@ function compra(precio, artista, stock){
         compra(precio, artista, stock)
     }
 }
-
 //Fin funciones
 
 let nombreUsuario = prompt("Hola, bienvenido! \nIngrese su nombre por favor:")
 alert("Hola " + nombreUsuario + " acá vendemos entradas de estos artistas:\n-La renga\n-Divididos")
-let cantidadDeLaCompra = parseInt(prompt(nombreUsuario + "... Ahora pongamos 1 si queres para un artista o 2 si queres para ambos"))
+let cantidadDeLaCompra = parseInt(prompt(nombreUsuario + "... Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."))
+
 if (cantidadDeLaCompra <= 2){
 
     for(let i = 0; i < cantidadDeLaCompra; i++){
         let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar")
-        if ((nombreCompra === entradasEventoA) || (nombreCompra === "la renga")){
-            compra (precioEntradasEventoA, entradasEventoA, stockEntradasEventoA)
+        if ((nombreCompra === eventoA.nombre) || (nombreCompra === "la renga")){
+            compra (eventoA.precio, eventoA.nombre, eventoA.stock)
         }
-        else if ((nombreCompra === entradasEventoB) || (nombreCompra === "divididos")){
-            compra (precioEntradasEventoB, entradasEventoB, stockEntradasEventoB)
+        else if ((nombreCompra === eventoB.nombre) || (nombreCompra === "divididos")){
+            compra (eventoB.precio, eventoB.nombre, eventoB.stock)
         }
         else{
-            alert("No tenemos entradas para ese artista")
-            
+            alert("No tenemos entradas para ese artista")  
         }
-
     }
 }
 else{
