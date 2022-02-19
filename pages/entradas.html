@@ -72,9 +72,71 @@
   <hr class="hr">
 
   <!-- Inicio prensa -->
+  <section class="encabezado-entradas">
+    <h1>Shows de nuestros artistas</h1>
+  </section>
+
+  <section class="flex-entrdas-container">
+    <div class="eventoUno">
+      <img src="../public/img/entradasEventoUno.jpeg" alt="">
+      <p>Lorem ipsum dolor sit amet sumenda
+        sequi, officiis saepe autem fuga repudiandae quae odio at beatae sit minus consectetur nobis commodi provident.
+      </p>
+      <hr class="hr">
+    </div>
+
+    <div class="eventoDos">
+      <img src="../public/img/entradasEventoDos.png" alt="">
+      <p>Lorem ipsum dolor sit amet sumenda
+        sequi, officiis saepe autem fuga repudiandae quae odio at beatae sit minus consectetur nobis commodi provident.
+      </p>
+      <hr class="hr">
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Bienvenido al selector de entradas</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Selecciones el show que desea ir</option>
+              <option value="1">Evento 1</option>
+              <option value="2">Evento 2</option>
+            </select>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Seleccione la entrada</option>
+              <option value="1">Opcion 1: $</option>
+              <option value="2">Opcion 2: $</option>
+            </select>
+            <input class="form-control" type="text" placeholder="Ingrese la cantidad de entradas que quiere"
+              aria-label="default input example">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="boton">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Comprar entradas
+    </button>
+  </section>
 
 
 
+
+
+  <hr class="hr">
   <!-- Footer -->
 
   <footer>

@@ -13,5 +13,13 @@
   "devDependencies": {
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiCobos/desafioComplementario1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatiCobos/desafioComplementario1/issues"
+  },
+  "homepage": "https://github.com/MatiCobos/desafioComplementario1#readme"
 }
