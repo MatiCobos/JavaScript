@@ -244,10 +244,16 @@ h2 {
 .btn-primary {
   background-color: black !important;
   border-color: brown !important;
+  box-shadow: 0 0 0 0.15rem brown !important;
 }
 
 .btn-primary:hover {
   background-color: brown !important;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.25rem brown !important;
+  background-color: black !important;
 }
 
 .offcanvas-title {
@@ -255,11 +261,11 @@ h2 {
 }
 
 .form-select {
-  margin: 10px;
+  margin: 0px 0px 20px;
 }
 
 .form-control {
-  margin: 10px;
+  margin: 20px 0px 0px 0px;
 }
 
 .modal-title {
@@ -290,6 +296,10 @@ h2 {
 
 .btn-close {
   color: white !important;
+}
+
+.img-fluid {
+  margin: 0px 0px 10px 0px;
 }
 /*
  .encabezado-prensa {
