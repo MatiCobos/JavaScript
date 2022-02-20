@@ -22,12 +22,30 @@ const eventoA = new Entradas ("La renga", 1000, 10)
 const eventoB = new Entradas ("Divididos", 3000, 10)
 //Fin objetos creados a partir de la funcion/class constructora
 
+//Arrays
+const listaEntradas = [eventoA, eventoB]
+//Fin arrays
+
 //Variables
 let cantidadComprada = 0
 let precioTotal = 0
 //Fin variables
 
+//Desafio complementario Arrays
+let contador = 0
+let listaArtistas = "Hola bienvenido! acá vendemos entradas para estos artistas: "
+
+for(const artista of listaEntradas){
+    contador++
+    listaArtistas += "\n" + contador + " " + artista.nombre
+}
+//Fin desafio desafio complementario Arrays
+
 //Funciones
+function listaEventos (){
+    alert(listaArtistas)/* ("Hola " + nombreUsuario + " acá vendemos entradas de estos artistas:\n" + listaEntradas[0].nombre + "\n" + listaEntradas[1].nombre), comento para despues borrar y volver como estaba pq no me gusta este metodo */
+}
+
 function sinStock (artista){
     alert("Solo puede comprar hasta 10 entradas de " + artista)
 } 
@@ -54,18 +72,18 @@ function compra(precio, artista, stock){
 //Fin funciones
 
 let nombreUsuario = prompt("Hola, bienvenido! \nIngrese su nombre por favor:")
-alert("Hola " + nombreUsuario + " acá vendemos entradas de estos artistas:\n-La renga\n-Divididos")
+listaEventos()
 let cantidadDeLaCompra = parseInt(prompt(nombreUsuario + "... Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."))
 
 if (cantidadDeLaCompra <= 2){
 
     for(let i = 0; i < cantidadDeLaCompra; i++){
         let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar")
-        if ((nombreCompra === eventoA.nombre) || (nombreCompra === "la renga")){
-            compra (eventoA.precio, eventoA.nombre, eventoA.stock)
+        if ((nombreCompra === listaEntradas[0].nombre) || (nombreCompra === "la renga")){
+            compra (listaEntradas[0].precio, listaEntradas[0].nombre, listaEntradas[0].stock)
         }
         else if ((nombreCompra === eventoB.nombre) || (nombreCompra === "divididos")){
-            compra (eventoB.precio, eventoB.nombre, eventoB.stock)
+            compra (listaEntradas[1].precio, listaEntradas[1].nombre, listaEntradas[1].stock)
         }
         else{
             alert("No tenemos entradas para ese artista")  
