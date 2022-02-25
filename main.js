@@ -15,15 +15,24 @@ class Entradas {
         this.stock = stockValor;
     }
 }
+
+class Usuarios {
+    constructor (nombreUsuario){
+        this.nombre = nombreUsuario
+    }
+
+}
 //Fin funcion contructora
 
 //Objetos creados a partir de la funcion/class constructora
 const eventoA = new Entradas ("La renga", 1000, 10)
 const eventoB = new Entradas ("Divididos", 3000, 10)
+const usuarios = new Usuarios ()
 //Fin objetos creados a partir de la funcion/class constructora
 
 //Arrays
 const listaEntradas = [eventoA, eventoB]
+const listaUsuarios = [usuarios]
 //Fin arrays
 
 //Variables
@@ -71,9 +80,9 @@ function compra(precio, artista, stock){
 }
 //Fin funciones
 
-let nombreUsuario = prompt("Hola, bienvenido! \nIngrese su nombre por favor:")
+listaUsuarios.push(new Usuarios(prompt("Hola, bienvenido! \nIngrese su nombre por favor:")))
 listaEventos()
-let cantidadDeLaCompra = parseInt(prompt(nombreUsuario + "... Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."))
+let cantidadDeLaCompra = parseInt(prompt("... Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."))
 
 if (cantidadDeLaCompra <= 2){
 
