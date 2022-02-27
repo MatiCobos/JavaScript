@@ -64,7 +64,7 @@ function conStock(precio, artista, stock){
     precioTotal += cantidadComprada * precio
     alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + artista + " en el Cosquin Rock 2022")
     stock -= cantidadComprada
-    console.log(nombreUsuario + " compró " + cantidadComprada + " entradas de " + artista + " quedando un stock final de: " + stock);
+    console.log("compraron " + cantidadComprada + " entradas de " + artista + " quedando un stock final de: " + stock);
 }
 
 function compra(precio, artista, stock){
