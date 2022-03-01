@@ -8,7 +8,7 @@ class Entradas {
 
 class Usuarios {
     constructor (nombreUsuario){
-        this.nombre = nombreUsuario
+        this.nombre = nombreUsuario;
     }
 
 }
@@ -27,8 +27,8 @@ let contador = 0;
 let listaArtistas = "Hola bienvenido! acá vendemos entradas para estos artistas: ";
 
 for(const artista of listaEntradas){
-    contador++
-    listaArtistas += "\n" + contador + " " + artista.nombre
+    contador++;
+    listaArtistas += "\n" + contador + " " + artista.nombre;
 }
 
 function listaEventos (){
@@ -41,9 +41,9 @@ function sinStock (artista){
 
 function conStock(precio, artista, stock){
 
-    precioTotal += cantidadComprada * precio
+    precioTotal += cantidadComprada * precio;
     alert("Se agrego al carrito " + cantidadComprada + " entradas para ver a " + artista + " en el Cosquin Rock 2022");
-    stock -= cantidadComprada
+    stock -= cantidadComprada;
     console.log("compraron " + cantidadComprada + " entradas de " + artista + " quedando un stock final de: " + stock);
 }
 
@@ -61,14 +61,14 @@ function compra(precio, artista, stock){
 
 listaUsuarios.push(new Usuarios(prompt("Hola, bienvenido! \nIngrese su nombre por favor:")));
 listaEventos();
-let cantidadDeLaCompra = parseInt(prompt("... Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."));
+let cantidadDeLaCompra = parseInt(prompt("Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."));
 
 if (cantidadDeLaCompra <= 2){
 
     for(let i = 0; i < cantidadDeLaCompra; i++){
         let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar");
 
-        let productoBuscado = listaEntradas.find(x => x.nombre == nombreCompra);
+        let productoBuscado = listaEntradas.find(artista => artista.nombre == nombreCompra);
         console.log(productoBuscado);
         
 
