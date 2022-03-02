@@ -1,8 +1,9 @@
 class Entradas {
-    constructor (nombreValor, precioValor, stockValor){
+    constructor (nombreValor, precioValor, stockValor, lugarValor){
         this.nombre = nombreValor;
         this.precio = precioValor;
         this.stock = stockValor;
+        this.lugar = lugarValor
     }
 }
 
@@ -13,12 +14,46 @@ class Usuarios {
 
 }
 
-const eventoA = new Entradas ("La renga", 1000, 10);
-const eventoB = new Entradas ("Divididos", 3000, 10);
+const eventoA = new Entradas ("La renga", 1000, 10, "La renga 20/02 - Galpón de Hurlingham");
+const eventoB = new Entradas ("Divididos", 3000, 10, "Divididos 14/05 - Teatro de Flores");
 const usuarios = new Usuarios ();
 
 const listaEntradas = [eventoA, eventoB];
 const listaUsuarios = [usuarios];
+
+let lugarEventoA = document.getElementById("evento1");
+lugarEventoA.innerText = eventoA.lugar;
+
+let lugarEventoB = document.getElementById("evento2");
+lugarEventoB.innerText = eventoB.lugar;
+
+let valorEventoA = document.getElementById("valor-evento1");
+valorEventoA.innerText = `${eventoA.nombre} - Campo $${eventoA.precio}`;
+
+let valorEventoB = document.getElementById("valor-evento2");
+valorEventoB.innerText = `${eventoB.nombre} - Campo $${eventoB.precio}`;
+
+let informacionEventoA = document.getElementById("info-evento1");
+informacionEventoA.innerHTML = `<div class="eventoUno" id="eventoUnoo">
+                                <img src="../public/img/entradasEventoUno.jpeg" class="img-fluid" alt="...">
+                                <hr class="hr">
+                                <p>${eventoA.nombre}<br>
+                                    Se presentara el día 20/02 en el galpón de Hurlingham<br>
+                                    Cantidad de entradas disponibles: ${eventoA.stock}
+                                </p>
+                                <hr class="hr">
+                                </div>`;
+
+let informacionEventoB = document.getElementById("info-evento2");
+informacionEventoB.innerHTML = `<div class="eventoDos" id="info-evento2">
+                                <img src="../public/img/entradasEventoDos.png" class="img-fluid" alt="...">
+                                <hr class="hr">
+                                <p>${eventoB.nombre}<br>
+                                    Se presentara el día 14/05 en el Teatro de Flores<br>
+                                    Cantidad de entradas disponibles: ${eventoB.stock}
+                                </p>
+                                <hr class="hr">
+                                </div>`;
 
 let cantidadComprada = 0;
 let precioTotal = 0;

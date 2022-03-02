@@ -77,19 +77,19 @@
   </section>
 
   <section class="flex-entrdas-container">
-    <div class="eventoUno">
+    <div class="eventoUno" id="info-evento1">
       <img src="../public/img/entradasEventoUno.jpeg" class="img-fluid" alt="...">
       <hr class="hr">
-      <p>V.I.D.A <br>
+      <p>La renga<br>
         Se presentara el día 20/02 en el galpón de Hurlingham
       </p>
       <hr class="hr">
     </div>
 
-    <div class="eventoDos">
+    <div class="eventoDos" id="info-evento2">
       <img src="../public/img/entradasEventoDos.png" class="img-fluid" alt="...">
       <hr class="hr">
-      <p>DESTRUCTION<br>
+      <p>Divididos<br>
         Se presentara el día 14/05 en el Teatro de Flores
       </p>
       <hr class="hr">
@@ -108,13 +108,13 @@
           <div class="modal-body">
             <select class="form-select" aria-label="Default select example">
               <option selected>Seleccione el show que desea ir</option>
-              <option value="1">Evento 1</option>
-              <option value="2">Evento 2</option>
+              <option value="1" id="evento1">Evento 1</option>
+              <option value="2" id="evento2">Evento 2</option>
             </select>
             <select class="form-select" aria-label="Default select example">
               <option selected>Seleccione la entrada</option>
-              <option value="1">Opcion 1: $</option>
-              <option value="2">Opcion 2: $</option>
+              <option value="1" id="valor-evento1">Opcion 1: $</option>
+              <option value="2" id="valor-evento2">Opcion 2: $</option>
             </select>
             <input class="form-control" type="text" placeholder="Ingrese la cantidad de entradas que quiere"
               aria-label="default input example">
