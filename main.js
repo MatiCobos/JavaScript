@@ -1,9 +1,10 @@
 class Entradas {
-    constructor (nombreValor, precioValor, stockValor, lugarValor){
+    constructor (nombreValor, precioValor, stockValor, lugarValor, imagenValor){
         this.nombre = nombreValor;
         this.precio = precioValor;
         this.stock = stockValor;
-        this.lugar = lugarValor
+        this.lugar = lugarValor;
+        this.img = imagenValor
     }
 }
 
@@ -14,8 +15,8 @@ class Usuarios {
 
 }
 
-const eventoA = new Entradas ("La renga", 1000, 10, "La renga 20/02 - Galpón de Hurlingham");
-const eventoB = new Entradas ("Divididos", 3000, 10, "Divididos 14/05 - Teatro de Flores");
+const eventoA = new Entradas ("La renga", 1000, 10, "La renga 20/02 - Galpón de Hurlingham", "../public/img/entradasEventoUno.jpeg");
+const eventoB = new Entradas ("Divididos", 3000, 10, "Divididos 14/05 - Teatro de Flores", "../public/img/entradasEventoDos.png");
 const usuarios = new Usuarios ();
 
 const listaEntradas = [eventoA, eventoB];
@@ -33,13 +34,12 @@ valorEventoA.innerText = `${eventoA.nombre} - Campo $${eventoA.precio}`;
 let valorEventoB = document.getElementById("valor-evento2");
 valorEventoB.innerText = `${eventoB.nombre} - Campo $${eventoB.precio}`;
 
-let informacionEventoA = document.getElementById("info-evento1");
+/*  let informacionEventoA = document.getElementById("info-evento1");
 informacionEventoA.innerHTML = `<div class="eventoUno" id="eventoUnoo">
                                 <img src="../public/img/entradasEventoUno.jpeg" class="img-fluid" alt="...">
                                 <hr class="hr">
                                 <p>${eventoA.nombre}<br>
-                                    Se presentara el día 20/02 en el galpón de Hurlingham<br>
-                                    Cantidad de entradas disponibles: ${eventoA.stock}
+                                    ${eventoA.lugar}<br> Cantidad a la venta: ${eventoA.stock}
                                 </p>
                                 <hr class="hr">
                                 </div>`;
@@ -49,11 +49,25 @@ informacionEventoB.innerHTML = `<div class="eventoDos" id="info-evento2">
                                 <img src="../public/img/entradasEventoDos.png" class="img-fluid" alt="...">
                                 <hr class="hr">
                                 <p>${eventoB.nombre}<br>
-                                    Se presentara el día 14/05 en el Teatro de Flores<br>
-                                    Cantidad de entradas disponibles: ${eventoB.stock}
+                                    ${eventoB.lugar} <br> Cantidad a la venta: ${eventoB.stock}
+                                </p>
+                                <hr class="hr">
+                                </div>`;  */
+ 
+for (const prueba of listaEntradas){
+    let contenedor = document.getElementById ("prueba")
+    
+    contenedor.innerHTML = `<div>
+                                <img src=${prueba.img} class="img-fluid" alt="...">
+                                <hr class="hr">
+                                <p>${prueba.nombre}<br>
+                                    ${prueba.lugar}<br> Cantidad a la venta: ${prueba.stock}
                                 </p>
                                 <hr class="hr">
                                 </div>`;
+    
+}
+
 
 let cantidadComprada = 0;
 let precioTotal = 0;

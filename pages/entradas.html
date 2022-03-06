@@ -76,8 +76,8 @@
     <h1>Shows de nuestros artistas</h1>
   </section>
 
-  <section class="flex-entrdas-container">
-    <div class="eventoUno" id="info-evento1">
+  <section class="flex-entrdas-container" id="prueba">
+    <!--     <div class="eventoUno" id="info-evento1">
       <img src="../public/img/entradasEventoUno.jpeg" class="img-fluid" alt="...">
       <hr class="hr">
       <p>La renga<br>
@@ -94,40 +94,41 @@
       </p>
       <hr class="hr">
 
-    </div>
+    </div> -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Bienvenido al selector de entradas</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione el show que desea ir</option>
-              <option value="1" id="evento1">Evento 1</option>
-              <option value="2" id="evento2">Evento 2</option>
-            </select>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione la entrada</option>
-              <option value="1" id="valor-evento1">Opcion 1: $</option>
-              <option value="2" id="valor-evento2">Opcion 2: $</option>
-            </select>
-            <input class="form-control" type="text" placeholder="Ingrese la cantidad de entradas que quiere"
-              aria-label="default input example">
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su e-mail">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Confirmar</button>
-          </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Bienvenido al selector de entradas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccione el show que desea ir</option>
+            <option value="1" id="evento1">Evento 1</option>
+            <option value="2" id="evento2">Evento 2</option>
+          </select>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccione la entrada</option>
+            <option value="1" id="valor-evento1">Opcion 1: $</option>
+            <option value="2" id="valor-evento2">Opcion 2: $</option>
+          </select>
+          <input class="form-control" type="number" placeholder="Ingrese la cantidad de entradas que quiere"
+            aria-label="default input example">
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su e-mail">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Confirmar</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <section class="boton">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
