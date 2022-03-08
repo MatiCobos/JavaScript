@@ -22,50 +22,39 @@ const usuarios = new Usuarios ();
 const listaEntradas = [eventoA, eventoB];
 const listaUsuarios = [usuarios];
 
-let lugarEventoA = document.getElementById("evento1");
-lugarEventoA.innerText = eventoA.lugar;
+for(const place of listaEntradas){
+    let contenedor = document.getElementById("places");
+    let lugar = document.createElement("option");
 
-let lugarEventoB = document.getElementById("evento2");
-lugarEventoB.innerText = eventoB.lugar;
-
-let valorEventoA = document.getElementById("valor-evento1");
-valorEventoA.innerText = `${eventoA.nombre} - Campo $${eventoA.precio}`;
-
-let valorEventoB = document.getElementById("valor-evento2");
-valorEventoB.innerText = `${eventoB.nombre} - Campo $${eventoB.precio}`;
-
-/*  let informacionEventoA = document.getElementById("info-evento1");
-informacionEventoA.innerHTML = `<div class="eventoUno" id="eventoUnoo">
-                                <img src="../public/img/entradasEventoUno.jpeg" class="img-fluid" alt="...">
-                                <hr class="hr">
-                                <p>${eventoA.nombre}<br>
-                                    ${eventoA.lugar}<br> Cantidad a la venta: ${eventoA.stock}
-                                </p>
-                                <hr class="hr">
-                                </div>`;
-
-let informacionEventoB = document.getElementById("info-evento2");
-informacionEventoB.innerHTML = `<div class="eventoDos" id="info-evento2">
-                                <img src="../public/img/entradasEventoDos.png" class="img-fluid" alt="...">
-                                <hr class="hr">
-                                <p>${eventoB.nombre}<br>
-                                    ${eventoB.lugar} <br> Cantidad a la venta: ${eventoB.stock}
-                                </p>
-                                <hr class="hr">
-                                </div>`;  */
- 
-for (const prueba of listaEntradas){
-    let contenedor = document.getElementById ("prueba")
+    lugar.innerText = `${place.lugar}`;
+    contenedor.append(lugar);
     
-    contenedor.innerHTML = `<div>
-                                <img src=${prueba.img} class="img-fluid" alt="...">
-                                <hr class="hr">
-                                <p>${prueba.nombre}<br>
-                                    ${prueba.lugar}<br> Cantidad a la venta: ${prueba.stock}
-                                </p>
-                                <hr class="hr">
-                                </div>`;
+}
+
+for(const precio of listaEntradas){
+    let contenedor = document.getElementById("precio");
+    let valor = document.createElement("option");
+
+    valor.innerText = `${precio.nombre} - Campo $${precio.precio}`;
+    contenedor.append(valor);
     
+}
+
+
+for (const entrada of listaEntradas){
+    let contenedor = document.getElementById ("cards-container");
+    
+    let prueba = document.createElement("div");
+     prueba.innerHTML = `<div class="eventoUno" id="info-evento1">
+                            <img src=${entrada.img} class="img-fluid" alt="...">
+                            <hr class="hr">
+                            <p>${entrada.nombre}<br>
+                                ${entrada.lugar}<br> Cantidad a la venta: ${entrada.stock}
+                            </p>
+                            <hr class="hr">
+                        </div>`;  
+
+    contenedor.append(prueba);
 }
 
 
