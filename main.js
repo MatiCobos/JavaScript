@@ -49,12 +49,47 @@ for (const entrada of listaEntradas){
                             <img src=${entrada.img} class="img-fluid" alt="...">
                             <hr class="hr">
                             <p>${entrada.nombre}<br>
-                                ${entrada.lugar}<br> Cantidad a la venta: ${entrada.stock}
+                                ${entrada.lugar}<br>
+                                Cantidad a la venta: ${entrada.stock}
                             </p>
                             <hr class="hr">
                         </div>`;  
 
     contenedor.append(prueba);
+}
+
+
+let inputEmail = document.getElementById("exampleFormControlInput1");
+inputEmail.addEventListener ("change", envioMail);
+function envioMail () {
+    console.log(`La entrada fue enviada a ${inputEmail.value}`);
+}
+
+let inputCantidadEntradas = document.getElementById("cantidad-entradas");
+inputCantidadEntradas.addEventListener ("change", cantidadEntradas);
+function cantidadEntradas () {
+    console.log(`compraste ${inputCantidadEntradas.value}`);
+}
+
+let optionEvento = document.getElementById("places");
+optionEvento.addEventListener ("change", lugar);
+
+function lugar (){
+    console.log(optionEvento.value);
+}
+
+let optionValor = document.getElementById("precio");
+optionValor.addEventListener ("change", valor);
+
+function valor (){
+    console.log(optionValor.value);
+}
+
+let boton = document.getElementById("btn-enviar");
+boton.addEventListener("click", respuestaClick);
+
+function respuestaClick () {
+    console.log(`Gracias por su compra! Adiquiriste ${inputCantidadEntradas.value} entradas para ${optionEvento.value} y seran enviadas a ${inputEmail.value}`);
 }
 
 
@@ -97,7 +132,7 @@ function compra(precio, artista, stock){
     }
 }
 
-listaUsuarios.push(new Usuarios(prompt("Hola, bienvenido! \nIngrese su nombre por favor:")));
+/* listaUsuarios.push(new Usuarios(prompt("Hola, bienvenido! \nIngrese su nombre por favor:")));
 listaEventos();
 let cantidadDeLaCompra = parseInt(prompt("Ahora pongamos:\n1: Si queres para un artista\n2: Si queres para ambos."));
 
@@ -125,4 +160,4 @@ else{
     alert("Solo tenemos para dos artistas");
     
 }
-alert("Muchas gracias por tu compra! Su saldo a pagar es: \n" + "$" + precioTotal);
+alert("Muchas gracias por tu compra! Su saldo a pagar es: \n" + "$" + precioTotal); */
