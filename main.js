@@ -53,27 +53,39 @@ for (const entrada of listaEntradas){
 }
 
 //Eventos
+
+
 function respuestaClick () {
 
     let optionEvento = document.getElementById("places").value;
+    let eventoQueQuiereUsuario = listaEntradas.find(evento => evento.lugar === optionEvento);
     let inputCantidadEntradas = document.getElementById("cantidad-entradas").value;
-    let inputEmail = document.getElementById("exampleFormControlInput1").value
-    let eventoQueQuiereUsuario = listaEntradas.find(evento => evento.lugar === optionEvento)
-    let total = inputCantidadEntradas * eventoQueQuiereUsuario.precio   
-
+    let inputEmail = document.getElementById("exampleFormControlInput1").value;
+    let total = inputCantidadEntradas * eventoQueQuiereUsuario.precio;
+    
     Swal.fire({
-    title: 'Gracias por su compra', 
-    text: `El total es: $${total}` ,
-    icon: 'success',
-    footer: `Se envió a: ${inputEmail} el QR para ingresar al show`,
-    confirmButtonText: 'Confirmar'
-    })
+        title: 'Gracias por su compra', 
+        text: `El total es: $${total}` ,
+        icon: 'success',
+        footer: `Se envió a: ${inputEmail} el QR para ingresar al show`,
+        confirmButtonText: 'Confirmar',
+    })  
+    
+
+ 
 
 }
 
 
 let boton = document.getElementById("btn-enviar");
 boton.addEventListener("click", respuestaClick);
+
+
+
+
+
+
+
 
 
 
