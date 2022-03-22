@@ -54,12 +54,13 @@ for (const entrada of listaEntradas){
 
 //Eventos
 
-
 function respuestaClick () {
 
     let optionEvento = document.getElementById("places").value;
     let eventoQueQuiereUsuario = listaEntradas.find(evento => evento.lugar === optionEvento);
-    let inputCantidadEntradas = document.getElementById("cantidad-entradas").value;
+    let inputCantidadEntradas = parseInt(document.getElementById("cantidad-entradas").value);
+
+    if (inputCantidadEntradas <= 10){
     let inputEmail = document.getElementById("exampleFormControlInput1").value;
     let total = inputCantidadEntradas * eventoQueQuiereUsuario.precio;
     
@@ -69,7 +70,17 @@ function respuestaClick () {
         icon: 'success',
         footer: `Se envió a: ${inputEmail} el QR para ingresar al show`,
         confirmButtonText: 'Confirmar',
-    })  
+    })
+    }
+    else{
+            Swal.fire({
+        title: 'Lo sentimos', 
+        text: `Solo puede comprar hasta 10 entradas, vuelva a intentarlo` ,
+        icon: 'error',
+        confirmButtonText: 'Confirmar',
+    })
+    }
+  
     
 
  
