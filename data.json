@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "V.I.D.A",
+        "precio": 1000,
+        "stock": 10,
+        "lugar": "V.I.D.A 20/02 - Galpón de Hurlingham",
+        "img": "../public/img/entradasEventoUno.jpeg"
+    },
+
+
+    {
+        "nombre": "Destruction",
+        "precio": 3000,
+        "stock": 10,
+        "lugar": "Destruction 14/05 - Teatro de Flores",
+        "img": "../public/img/entradasEventoDos.png"
+    }
+]
